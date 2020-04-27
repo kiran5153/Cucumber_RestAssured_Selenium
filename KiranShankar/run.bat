@@ -1,0 +1,1 @@
+mvn clean install & target\Reports\cucumber-reports\cucumber-html-reports\feature-overview.html
