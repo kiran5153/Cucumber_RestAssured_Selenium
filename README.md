@@ -3,7 +3,7 @@ Test Assignment - Kiran Shankar
 Tools Stack: Java, jUnit, Selenium, Cucumber, RestAssured, Maven-Cucumber Reports
 
 # Instructions to run the tests
-goto the project location
+goto the project location <<projectlocation>>\KiranShankar\
 double click on file "run.bat"
 command prompt opens up and execution begins
 wait until all the tests are executed
@@ -16,5 +16,5 @@ goto the project location
 type the command     mvn clean install
 execution begins
 wait until all the tests are executed
-to view the reports, goto-  <<projectlocation>>\target\Reports\cucumber-reports\cucumber-html-reports\feature-overview.html
+to view the reports, goto-  <<projectlocation>>\KiranShankar\target\Reports\cucumber-reports\cucumber-html-reports\feature-overview.html
 
