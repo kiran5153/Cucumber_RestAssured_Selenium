@@ -1,12 +1,13 @@
 # Assignment
-Test Assignment - Cucumber, RestAssured
+Test Assignment - Kiran Shankar 
+Tools Stack: Java, jUnit, Selenium, Cucumber, RestAssured, Maven-Cucumber Reports
 
-# Instructions on how to run the tests
+# Instructions to run the tests
 goto the project location
-double click on file "run.bat" (OR goto command prompt>>project location>>mvn clean install)
+double click on file "run.bat"
 command prompt opens up and execution begins
 wait until all the tests are executed
-goto <<projectlocation>>\target\Reports\cucumber-reports\cucumber-html-reports\feature-overview.html
+report opens automatically in default configures browser
 
 OR
 
@@ -15,4 +16,5 @@ goto the project location
 type the command     mvn clean install
 execution begins
 wait until all the tests are executed
-goto <<projectlocation>>\target\Reports\cucumber-reports\cucumber-html-reports\feature-overview.html
+to view the reports, goto-  <<projectlocation>>\target\Reports\cucumber-reports\cucumber-html-reports\feature-overview.html
+
