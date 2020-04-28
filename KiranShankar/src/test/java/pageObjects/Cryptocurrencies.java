@@ -30,6 +30,9 @@ public class Cryptocurrencies extends TestBase {
 
     @FindBy(xpath = "a[class*='cmc-view-all__back-button']")
     private WebElement backToTop100;
+    
+    @FindBy(xpath = "(//span[contains(@class, 'surveyIcons')])[1]")
+    private WebElement surveyIcon;
 
     @FindBy(xpath = "//div[contains(@class, 'cmc-table__column-name')]//a/ancestor::td/following-sibling::td//div[@class='cmc-popover__trigger']")
     private List<WebElement> ellipsis;
@@ -84,6 +87,8 @@ public class Cryptocurrencies extends TestBase {
             genericUtility.waitForPageLoad();
             Assert.assertTrue("Coin Marketcap page is not opened/loaded", driver.getCurrentUrl().equalsIgnoreCase(GenericUtility.readConfigs("coinmarketcapURL")));
             cookieX.click();
+            if (surveyIcon.isDisplayed())
+                surveyIcon.click();
         } catch (Exception e) {
             e.printStackTrace();
             throw e;
