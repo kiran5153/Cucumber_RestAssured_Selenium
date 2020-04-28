@@ -31,7 +31,7 @@ public class Cryptocurrencies extends TestBase {
     @FindBy(xpath = "a[class*='cmc-view-all__back-button']")
     private WebElement backToTop100;
     
-    @FindBy(xpath = "(//span[contains(@class, 'surveyIcons')])[1]")
+    @FindBy(xpath = "//span[contains(@class, 'openStateToggleIcon')]")
     private WebElement surveyIcon;
 
     @FindBy(xpath = "//div[contains(@class, 'cmc-table__column-name')]//a/ancestor::td/following-sibling::td//div[@class='cmc-popover__trigger']")
