@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testRunner.TestRunner" time="103.194" tests="7" errors="0" skipped="0" failures="0">
+<testsuite name="testRunner.TestRunner" time="136.752" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin"/>
     <property name="java.vm.version" value="25.251-b08"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Latest Codebase\KiranShankar"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Latest Codebase\Assignments\Assignment\KiranShankar"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Latest Codebase\KiranShankar"/>
+    <property name="user.dir" value="D:\Latest Codebase\Assignments\Assignment\KiranShankar"/>
     <property name="java.runtime.version" value="1.8.0_251-b08"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\endorsed"/>
@@ -28,7 +28,7 @@
     <property name="os.name" value="Windows 7"/>
     <property name="classworlds.conf" value="C:\Kiran\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_251\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Kiran\gradle-6.1.1\bin;C:\Kiran\apache-maven-3.6.3\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.2\bin;C:\Users\Kiran\AppData\Roaming\npm;C:\Users\Kiran\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_251\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Kiran\gradle-6.1.1\bin;C:\Kiran\apache-maven-3.6.3\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.2\bin;C:\Users\Kiran\AppData\Roaming\npm;C:\Users\Kiran\AppData\Local\GitHubDesktop\bin;C:\Users\Kiran\AppData\Local\Programs\Microsoft VS Code\bin;."/>
     <property name="maven.conf" value="C:\Kiran\apache-maven-3.6.3\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -64,11 +64,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="API_Test1" classname="Back-end Testcases" time="7.644"/>
-  <testcase name="API_Test1" classname="Back-end Testcases" time="1.341"/>
-  <testcase name="API_Test1" classname="Back-end Testcases" time="0.874"/>
-  <testcase name="API_Test2" classname="Back-end Testcases" time="0.703"/>
-  <testcase name="UI_Test1" classname="Front-end Testcases" time="28.426"/>
-  <testcase name="UI_Test2" classname="Front-end Testcases" time="27.82"/>
-  <testcase name="UI_Test3" classname="Front-end Testcases" time="38.601"/>
+  <testcase name="API_Test1" classname="Back-end Testcases" time="5.27"/>
+  <testcase name="API_Test1" classname="Back-end Testcases" time="1.895"/>
+  <testcase name="API_Test1" classname="Back-end Testcases" time="1.217"/>
+  <testcase name="API_Test2" classname="Back-end Testcases" time="0.978"/>
+  <testcase name="UI_Test1" classname="Front-end Testcases" time="36.618"/>
+  <testcase name="UI_Test2" classname="Front-end Testcases" time="42.819"/>
+  <testcase name="UI_Test3" classname="Front-end Testcases" time="51.067"/>
 </testsuite>

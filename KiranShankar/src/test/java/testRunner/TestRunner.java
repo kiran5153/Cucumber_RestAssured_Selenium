@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = {"stepDefinations"},
         dryRun = false,
         monochrome = true,
-//        tags ={"@front-end"},
+//        tags ={"@back-end"},
         strict = true,
         plugin = {
                 "pretty",

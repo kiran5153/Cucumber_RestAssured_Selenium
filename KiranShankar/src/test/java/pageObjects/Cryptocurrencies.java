@@ -5,17 +5,17 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.DriverFactory;
 import utilities.GenericUtility;
-import utilities.TestBase;
 import java.util.*;
 
-public class Cryptocurrencies extends TestBase {
+public class Cryptocurrencies  {
 
     GenericUtility genericUtility;
     HashMap<String, String> currDetails;
 
     public Cryptocurrencies () {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(DriverFactory.getWebDriver(), this);
         genericUtility = new GenericUtility();
     }
 
@@ -85,10 +85,10 @@ public class Cryptocurrencies extends TestBase {
     public void verifyCoinMarketcapHomepageisOpened () {
         try {
             genericUtility.waitForPageLoad();
-            Assert.assertTrue("Coin Marketcap page is not opened/loaded", driver.getCurrentUrl().equalsIgnoreCase(GenericUtility.readConfigs("coinmarketcapURL")));
+            Assert.assertTrue("Coin Marketcap page is not opened/loaded", DriverFactory.getWebDriver().getCurrentUrl().equalsIgnoreCase(GenericUtility.readConfigs("coinmarketcapURL")));
             cookieX.click();
-            if (surveyIcon.isDisplayed())
-                surveyIcon.click();
+//            if (surveyIcon.isDisplayed())
+//                surveyIcon.click();
         } catch (Exception e) {
             e.printStackTrace();
             throw e;
@@ -219,7 +219,7 @@ public class Cryptocurrencies extends TestBase {
     public void applyFilters (String filterName, String range) {
         try {
             String minRange="", maxRange="";
-            if (filtersButton.getAttribute("class").contains("bzWQIF"))
+            if (filtersButton.getAttribute("class").contains("krkHSX"))
                 filtersButton.click();
 
             switch (filterName.trim().toLowerCase()) {
@@ -249,6 +249,7 @@ public class Cryptocurrencies extends TestBase {
 
     public void checkAgainstTheDataRecorded () {
         try {
+            genericUtility.waitForPageLoad();
             if (cryptoCurrList.size() != currSymbolsList.size() && cryptoCurrList.size() !=  mcapList.size()
                     && cryptoCurrList.size() != priceList.size())
                 Assert.fail("XPATH issue: Count of Cryptocurrenicies, Symbols, Mcaps, Price do NOT match");

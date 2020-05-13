@@ -1,18 +1,20 @@
 package utilities;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
+
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public class DriverFactory {
 
-    public static WebDriver driver;
+    private static final ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
 
-    public static void openBrowser() {
+    public static WebDriver initWebDriver() {
+        WebDriver driver=null;
         try {
             String browser = GenericUtility.readConfigs("browser");
             String coinmarketcapURL = GenericUtility.readConfigs("coinmarketcapURL");
@@ -40,21 +42,33 @@ public class TestBase {
             driver.manage().timeouts().pageLoadTimeout(Integer.parseInt(pageTimeout), TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(Integer.parseInt(elementTimeout), TimeUnit.SECONDS);
             driver.get(coinmarketcapURL);
-
         } catch (Exception e) {
             e.printStackTrace();
             throw e;
         }
+        return driver;
     }
 
-    public static void closeBrowser(){
+    public static WebDriver getWebDriver() {
+        return webDriver.get();
+    }
+
+    public static void setWebDriver(WebDriver driver) {
+        if(DriverFactory.getWebDriver()== null)
+            webDriver.set(driver);
+    }
+
+    public static void tearDownDrivers(){
         try {
-            driver.close();
-            driver.quit();
+            if (DriverFactory.getWebDriver() != null) {
+                DriverFactory.getWebDriver().quit();
+                DriverFactory.webDriver.remove();
+            }
         }catch (Exception e){
             e.printStackTrace();
             throw e;
         }
     }
+
 
 }

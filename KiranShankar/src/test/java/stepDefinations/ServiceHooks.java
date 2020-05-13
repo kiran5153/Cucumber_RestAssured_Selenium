@@ -1,18 +1,26 @@
 package stepDefinations;
 
 import io.cucumber.java.*;
-import utilities.TestBase;
+import org.openqa.selenium.WebDriver;
+import utilities.DriverFactory;
 
-public class ServiceHooks extends TestBase {
+import static utilities.DriverFactory.setWebDriver;
+
+public class ServiceHooks extends DriverFactory {
 
     @Before ("@front-end")
     public void setup() {
-        openBrowser();
+        WebDriver driver = initWebDriver();
+        if (driver!=null) {
+            setWebDriver(driver);
+        }else {
+            throw new RuntimeException("Unable to produce the driver");
+        }
     }
 
     @After("@front-end")
     public void tearDown() {
-        closeBrowser();
+        tearDownDrivers();
     }
 
 }

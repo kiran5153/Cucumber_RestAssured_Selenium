@@ -4,6 +4,8 @@ import org.junit.Assert;
 import utilities.GenericUtility;
 import utilities.RestUtility;
 import java.util.HashMap;
+import static org.hamcrest.Matchers.*;
+
 
 public class Apis {
 
@@ -66,6 +68,7 @@ public class Apis {
 
             String attribute = "data." + currency_ID + ".urls.website[0]";
             String techDocWebsite = restUtility.getResponseValue(response, attribute);
+
             Assert.assertTrue("Technical Documentation Website is Null", techDocWebsite!=null);
             Assert.assertTrue("Error while execute the request",
                     Integer.parseInt(restUtility.getResponseValue(response, "status.error_code"))==0);
@@ -89,8 +92,11 @@ public class Apis {
                 default:
                     attribute = "data." + currency_ID + "." + expectedField.toLowerCase();
             }
-            String value = String.valueOf(restUtility.getResponseValue(response, attribute));
 
+//            Can simply validate by using Hamcrest library
+//            response.then().assertThat().body(attribute, equalTo(expectedValues));
+
+            String value = String.valueOf(restUtility.getResponseValue(response, attribute));
             Assert.assertTrue(expectedField+ "-" + expectedValues+" mismatch", expectedValues.equalsIgnoreCase(value));
             System.out.println("**********"+ expectedField + "---" + expectedValues+" validated successfully**********");
         }catch (Exception e){
